@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProCalc - Advanced Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <!-- History Sidebar -->
+        <div class="history-sidebar" id="historySidebar">
+            <div class="sidebar-header">
+                <h3>History</h3>
+                <button id="clearHistory" class="btn-text">Clear</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <!-- History items will be injected here -->
+            </div>
+            <button id="closeHistory" class="btn-close">&times;</button>
+        </div>
+
+        <!-- Main Calculator -->
+        <div class="calculator-main">
+            <div class="display-container">
+                <div class="expression-display" id="expressionDisplay"></div>
+                <div class="result-display" id="resultDisplay">0</div>
+            </div>
+
+            <div class="controls-row">
+                <div class="mode-toggle">
+                    <button id="degRadToggle" class="btn-mode">DEG</button>
+                    <button id="themeToggle" class="btn-mode">🌙</button>
+                </div>
+                <button id="toggleHistory" class="btn-history">🕒 History</button>
+            </div>
+
+            <div class="button-grid">
+                <!-- Memory Row -->
+                <button class="btn btn-mem" data-action="MC">MC</button>
+                <button class="btn btn-mem" data-action="MR">MR</button>
+                <button class="btn btn-mem" data-action="M+">M+</button>
+                <button class="btn btn-mem" data-action="M-">M-</button>
+                <button class="btn btn-util" data-action="clear">AC</button>
+
+                <!-- Scientific Row 1 -->
+                <button class="btn btn-sci" data-func="sin">sin</button>
+                <button class="btn btn-sci" data-func="cos">cos</button>
+                <button class="btn btn-sci" data-func="tan">tan</button>
+                <button class="btn btn-sci" data-func="log">log</button>
+                <button class="btn btn-sci" data-func="ln">ln</button>
+
+                <!-- Scientific Row 2 -->
+                <button class="btn btn-sci" data-func="sqrt">√</button>
+                <button class="btn btn-sci" data-func="pow">xʸ</button>
+                <button class="btn btn-sci" data-func="fact">n!</button>
+                <button class="btn btn-sci" data-const="PI">π</button>
+                <button class="btn btn-sci" data-const="E">e</button>
+
+                <!-- Basic Layout -->
+                <button class="btn btn-num" data-val="7">7</button>
+                <button class="btn btn-num" data-val="8">8</button>
+                <button class="btn btn-num" data-val="9">9</button>
+                <button class="btn btn-op" data-op="*">×</button>
+                <button class="btn btn-util" data-action="backspace">⌫</button>
+
+                <button class="btn btn-num" data-val="4">4</button>
+                <button class="btn btn-num" data-val="5">5</button>
+                <button class="btn btn-num" data-val="6">6</button>
+                <button class="btn btn-op" data-op="/">÷</button>
+                <button class="btn btn-op" data-op="(">(</button>
+
+                <button class="btn btn-num" data-val="1">1</button>
+                <button class="btn btn-num" data-val="2">2</button>
+                <button class="btn btn-num" data-val="3">3</button>
+                <button class="btn btn-op" data-op="-">−</button>
+                <button class="btn btn-op" data-op=")">)</button>
+
+                <button class="btn btn-num" data-val="0">0</button>
+                <button class="btn btn-num" data-val=".">.</button>
+                <button class="btn btn-op" data-op="+">+</button>
+                <button class="btn btn-equal" id="equalBtn">=</button>
+                <button class="btn btn-op" data-op="%">%</button>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
